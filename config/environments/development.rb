@@ -1,5 +1,7 @@
 require "active_support/core_ext/integer/time"
 
+
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -16,6 +18,8 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
+  config.hosts << "0dfd-102-217-64-20.ngrok-free.app"
+  
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
