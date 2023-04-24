@@ -1,0 +1,14 @@
+export const getSignedInUserEmail = async () => {
+    try {
+        let status = await checkSignInStatus();
+        if (status){
+            var auth2 = gapi.auth2.getAuthInstance();
+            var profile = auth2.currentUser.get().getBasicProfile();
+            return profile.getEmail()
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
